@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const db = require('./config/db');
-const mongo = require('./config/mongo');
+const connectMongoDB = require('./config/mongo');  // Change this line to properly call the function
 
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -12,6 +12,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+// Connect to MongoDB
+connectMongoDB();  // Add this line to call the MongoDB connection function
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);

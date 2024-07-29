@@ -22,7 +22,7 @@ const generateUniqueShopID = async () => {
 
       if (results.length > 0) {
         // If there's an existing counter for today, increment it
-        counter = results[0].counter + 1;
+        counter = results[0].counter;
         const updateCounterQuery = 'UPDATE shop_counter SET counter = ? WHERE date = ?';
         db.query(updateCounterQuery, [counter, dateString], (updateErr) => {
           if (updateErr) {
