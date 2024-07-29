@@ -1,0 +1,88 @@
+.provide-shop-id-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #232526, #414345);
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    width: 100%; /* Ensure the page takes up the full width */
+    overflow: hidden; /* Ensure no overflow */
+  }
+  
+  .provide-shop-id-container {
+    max-width: 500px;
+    width: 100%; /* Ensure full width */
+    margin: 50px auto;
+    padding: 40px;
+    background: #1c1c1c;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .provide-shop-id-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .provide-shop-id-container h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .provide-shop-id-container .error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .provide-shop-id-container .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .provide-shop-id-container .form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ddd;
+  }
+  
+  .provide-shop-id-container .form-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+  }
+  
+  .provide-shop-id-container .submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .provide-shop-id-container .submit-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .provide-shop-id-container .success-message {
+    color: #27ae60;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  

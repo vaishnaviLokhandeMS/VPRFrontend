@@ -1,0 +1,98 @@
+.select-shop-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.select-shop-container {
+  max-width: 800px;
+  width: 90%;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.select-shop-container h2 {
+  color: #ecf0f1;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #34495e;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  background-color: #34495e;
+  color: #ecf0f1;
+  transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #3498db;
+}
+
+.shop-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.shop-list li {
+  background-color: #34495e;
+  color: #ecf0f1;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2em;
+}
+
+.shop-list li:hover {
+  background-color: #3a539b;
+}
+
+.create-shop-button,
+.provide-shop-id-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+
+.create-shop-button:hover,
+.provide-shop-id-button:hover {
+  background-color: #2980b9;
+}
+
+/* Scrollbar styling */
+.shop-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.shop-list::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 10px;
+}
+
+.shop-list::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}

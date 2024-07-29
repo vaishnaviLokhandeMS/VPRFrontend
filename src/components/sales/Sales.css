@@ -1,0 +1,12 @@
+.sales-container {
+    margin-left: 220px;
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .sales-container {
+      margin-left: 0;
+      padding: 10px;
+    }
+  }
+  

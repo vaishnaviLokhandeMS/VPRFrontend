@@ -1,0 +1,117 @@
+body {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.create-shop-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-shop-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.create-shop-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.error-message, .success-message {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: #e74c3c;
+}
+
+.success-message {
+  color: #27ae60;
+}
+
+.create-shop-form .form-group {
+  margin-bottom: 15px;
+}
+
+.create-shop-form .form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.create-shop-form .form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #333;
+  color: #fff;
+}
+
+.create-shop-form .form-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shop-id {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .create-shop-container {
+    padding: 10px;
+  }
+
+  .create-shop-title {
+    font-size: 24px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}
