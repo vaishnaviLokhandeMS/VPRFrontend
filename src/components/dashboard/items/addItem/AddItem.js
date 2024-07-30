@@ -11,7 +11,7 @@ import ImportantDates from './ImportantDates';
 import Identifiers from './Identifiers';
 
 const AddItem = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     itemName: '',
     itemHSN: '',
     itemCode: '',
@@ -102,7 +102,9 @@ const AddItem = () => {
     serialNumber: '',
     batchNumber: '',
     modelNumber: ''
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const [expandedSections, setExpandedSections] = useState({
     identifiers: false,
@@ -147,6 +149,8 @@ const AddItem = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log('Success:', data);
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to the top
+        setFormData(initialFormData); // Reset form fields
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -240,7 +244,6 @@ const AddItem = () => {
             </div>
           </div>
           <div className="form-actions">
-            <button type="button" className="save-and-new-button">Save & New</button>
             <button type="submit" className="save-button">Save</button>
           </div>
         </form>
