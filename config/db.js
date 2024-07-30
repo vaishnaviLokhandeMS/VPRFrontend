@@ -1,17 +1,28 @@
+// config/db.js
 const mysql = require('mysql');
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'vyapar',
-  password: 'vyapar',
-  database: 'mvpr',
-});
+const logger = require('./../utils/logger');
 
-db.connect((err) => {
-  if (err) {
-    console.error('MySQL connection error:', err);
-    return;
-  }
-  console.log('MySQL Connected...');
-});
+const dbConfig = {
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: 'mvpr' // Default database
+};
 
-module.exports = db;
+const createConnection = (database) => {
+  const finalConfig = { ...dbConfig, database: database || dbConfig.database };
+  logger.info(`Creating connection to database: ${finalConfig.database}`);
+  const connection = mysql.createConnection(finalConfig);
+
+  connection.connect((err) => {
+    if (err) {
+      logger.error(`Error connecting to database ${finalConfig.database}: ${err.message}`);
+    } else {
+      logger.info(`Connected to database: ${finalConfig.database}`);
+    }
+  });
+
+  return connection;
+};
+
+module.exports = { createConnection };

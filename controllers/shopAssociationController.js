@@ -1,4 +1,4 @@
-const db = require('../config/db.js');
+const { createConnection } = require('../config/db.js');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -25,6 +25,7 @@ const findFirstNullUserColumn = (shopRow) => {
 };
 
 const getUserShops = (req, res) => {
+  const db = createConnection(); // Always use default database 'mvpr'
   try {
     const token = req.headers.authorization.split(' ')[1];
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
@@ -33,9 +34,11 @@ const getUserShops = (req, res) => {
     const query = 'SELECT * FROM users WHERE uuid = ?';
     db.query(query, [decoded.userId], (err, result) => {
       if (err) {
+        db.end();
         return res.status(500).json({ message: err.message });
       }
       if (result.length === 0) {
+        db.end();
         console.log('User not found for UUID:', decoded.userId);
         return res.status(404).json({ message: 'User not found' });
       }
@@ -46,6 +49,7 @@ const getUserShops = (req, res) => {
       if (user.isAdmin === 1) {
         const getAllShopsQuery = 'SELECT * FROM shops';
         db.query(getAllShopsQuery, (shopsErr, shopsResult) => {
+          db.end();
           if (shopsErr) {
             return res.status(500).json({ message: shopsErr.message });
           }
@@ -56,11 +60,13 @@ const getUserShops = (req, res) => {
         const userShops = shopColumns.filter(col => user[col] !== null).map(col => user[col]);
 
         if (userShops.length === 0) {
+          db.end();
           return res.status(404).json({ message: 'No shops associated with this user' });
         }
 
         const getShopsQuery = 'SELECT * FROM shops WHERE shopID IN (?)';
         db.query(getShopsQuery, [userShops], (shopsErr, shopsResult) => {
+          db.end();
           if (shopsErr) {
             return res.status(500).json({ message: shopsErr.message });
           }
@@ -70,11 +76,13 @@ const getUserShops = (req, res) => {
       }
     });
   } catch (error) {
+    db.end();
     return res.status(401).json({ message: 'Invalid token' });
   }
 };
 
 const validateShopID = (req, res) => {
+  const db = createConnection(); // Always use default database 'mvpr'
   try {
     const { shopID, password } = req.body;
     const token = req.headers.authorization.split(' ')[1];
@@ -84,15 +92,18 @@ const validateShopID = (req, res) => {
     const query = 'SELECT * FROM shops WHERE shopID = ?';
     db.query(query, [shopID], async (err, results) => {
       if (err) {
+        db.end();
         return res.status(500).json({ message: err.message });
       }
       if (results.length === 0) {
+        db.end();
         return res.status(404).json({ success: false, message: 'No shop found with the provided ID.' });
       }
 
       const shop = results[0];
       const isMatch = await bcrypt.compare(password, shop.password);
       if (!isMatch) {
+        db.end();
         return res.status(400).json({ success: false, message: 'Invalid password.' });
       }
 
@@ -100,9 +111,11 @@ const validateShopID = (req, res) => {
       const getUserQuery = 'SELECT * FROM users WHERE uuid = ?';
       db.query(getUserQuery, [decoded.userId], (getUserErr, getUserResult) => {
         if (getUserErr) {
+          db.end();
           return res.status(500).json({ message: getUserErr.message });
         }
         if (getUserResult.length === 0) {
+          db.end();
           console.log('User not found for UUID in validateShopID:', decoded.userId);
           return res.status(404).json({ message: 'User not found.' });
         }
@@ -112,12 +125,14 @@ const validateShopID = (req, res) => {
         const isShopAlreadyAssociated = shopColumns.some(col => userRow[col] === shopID);
 
         if (isShopAlreadyAssociated) {
+          db.end();
           return res.status(400).json({ message: 'This shop is already associated with the user.' });
         }
 
         const userShopColumn = findFirstNullShopColumn(userRow);
 
         if (!userShopColumn) {
+          db.end();
           return res.status(500).json({ message: 'No available shop column for the user.' });
         }
 
@@ -125,6 +140,7 @@ const validateShopID = (req, res) => {
         const updateUserQuery = `UPDATE users SET ${userShopColumn} = ? WHERE uuid = ?`;
         db.query(updateUserQuery, [shopID, decoded.userId], (updateUserErr) => {
           if (updateUserErr) {
+            db.end();
             return res.status(500).json({ message: updateUserErr.message });
           }
 
@@ -132,9 +148,11 @@ const validateShopID = (req, res) => {
           const getShopQuery = 'SELECT * FROM shops WHERE shopID = ?';
           db.query(getShopQuery, [shopID], (getShopErr, getShopResult) => {
             if (getShopErr) {
+              db.end();
               return res.status(500).json({ message: getShopErr.message });
             }
             if (getShopResult.length === 0) {
+              db.end();
               return res.status(404).json({ message: 'Shop not found.' });
             }
 
@@ -142,11 +160,13 @@ const validateShopID = (req, res) => {
             const shopUserColumn = findFirstNullUserColumn(shopRow);
 
             if (!shopUserColumn) {
+              db.end();
               return res.status(500).json({ message: 'No available user column for the shop.' });
             }
 
             const updateShopQuery = `UPDATE shops SET ${shopUserColumn} = ? WHERE shopID = ?`;
             db.query(updateShopQuery, [decoded.userId, shopID], (updateShopErr) => {
+              db.end();
               if (updateShopErr) {
                 return res.status(500).json({ message: updateShopErr.message });
               }
@@ -158,6 +178,7 @@ const validateShopID = (req, res) => {
       });
     });
   } catch (error) {
+    db.end();
     return res.status(401).json({ message: 'Invalid token' });
   }
 };

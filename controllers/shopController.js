@@ -1,10 +1,11 @@
 const moment = require('moment');
-const db = require('../config/db.js');
+const { createConnection } = require('../config/db.js');
 const bcrypt = require('bcrypt');
 const generateUniqueShopID = require('../utils/generateUniqueShopID');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const connectMongoDB = require('../config/mongo'); // Import MongoDB connection
+const initializeShopDatabase = require('../utils/dbInitializer'); // Import the DB initializer
 
 // Load environment variables from .env file
 dotenv.config();
@@ -31,6 +32,7 @@ const findFirstNullUserColumn = (shopRow) => {
 };
 
 const createShop = async (req, res) => {
+  const db = createConnection(); // Always use default database 'mvpr'
   const {
     shop_name,
     shop_address,
@@ -72,6 +74,7 @@ const createShop = async (req, res) => {
       ],
       async (insertShopErr, result) => {
         if (insertShopErr) {
+          db.end();
           if (insertShopErr.code === 'ER_DUP_ENTRY') {
             return res.status(400).json({ message: 'Shop already exists. Please choose another name.' });
           }
@@ -87,6 +90,9 @@ const createShop = async (req, res) => {
               resolve();
             });
           });
+
+          // Initialize the newly created MySQL database with necessary tables
+          await initializeShopDatabase(shopID);
 
           // Create a new MongoDB database for the shop and perform an initial write
           const shopMongoDbUri = `${process.env.MONGO_URI}/${shopID}`;
@@ -111,6 +117,7 @@ const createShop = async (req, res) => {
           const updateCountQuery = 'UPDATE shop_counter SET counter = counter + 1 WHERE date = ?';
           db.query(updateCountQuery, [currentDate], (updateCountErr) => {
             if (updateCountErr) {
+              db.end();
               return res.status(500).json({ message: 'Database error', error: updateCountErr });
             }
 
@@ -118,11 +125,13 @@ const createShop = async (req, res) => {
             const getUserQuery = 'SELECT * FROM users WHERE uuid = ?';
             db.query(getUserQuery, [user_id], (getUserErr, getUserResult) => {
               if (getUserErr) {
+                db.end();
                 console.error('Error querying users table:', getUserErr);
                 return res.status(500).json({ message: 'Database error', error: getUserErr });
               }
 
               if (!getUserResult || getUserResult.length === 0) {
+                db.end();
                 console.log('User not found for user_id:', user_id);
                 return res.status(404).json({ message: 'User not found.' });
               }
@@ -132,6 +141,7 @@ const createShop = async (req, res) => {
               const userShopColumn = findFirstNullShopColumn(userRow);
 
               if (!userShopColumn) {
+                db.end();
                 return res.status(500).json({ message: 'No available shop column for the user.' });
               }
 
@@ -139,6 +149,7 @@ const createShop = async (req, res) => {
               const updateUserQuery = `UPDATE users SET ${userShopColumn} = ? WHERE uuid = ?`;
               db.query(updateUserQuery, [shopID, user_id], (updateUserErr) => {
                 if (updateUserErr) {
+                  db.end();
                   console.error('Error updating users table:', updateUserErr);
                   return res.status(500).json({ message: 'Database error', error: updateUserErr });
                 }
@@ -147,11 +158,13 @@ const createShop = async (req, res) => {
                 const getShopQuery = 'SELECT * FROM shops WHERE shopID = ?';
                 db.query(getShopQuery, [shopID], (getShopErr, getShopResult) => {
                   if (getShopErr) {
+                    db.end();
                     console.error('Error querying shops table:', getShopErr);
                     return res.status(500).json({ message: 'Database error', error: getShopErr });
                   }
 
                   if (!getShopResult || getShopResult.length === 0) {
+                    db.end();
                     return res.status(404).json({ message: 'Shop not found.' });
                   }
 
@@ -160,12 +173,14 @@ const createShop = async (req, res) => {
                   const shopUserColumn = findFirstNullUserColumn(shopRow);
 
                   if (!shopUserColumn) {
+                    db.end();
                     return res.status(500).json({ message: 'No available user column for the shop.' });
                   }
 
                   // Associate user with the shop in shops table
                   const updateShopQuery = `UPDATE shops SET ${shopUserColumn} = ? WHERE shopID = ?`;
                   db.query(updateShopQuery, [user_id, shopID], (updateShopErr) => {
+                    db.end();
                     if (updateShopErr) {
                       console.error('Error updating shops table:', updateShopErr);
                       return res.status(500).json({ message: 'Database error', error: updateShopErr });
@@ -178,12 +193,14 @@ const createShop = async (req, res) => {
             });
           });
         } catch (err) {
+          db.end();
           console.error('Error creating databases:', err);
           res.status(500).json({ message: 'Error creating databases', error: err });
         }
       }
     );
   } catch (err) {
+    db.end();
     console.error('Server error:', err);
     res.status(500).json({ message: 'Server error', error: err });
   }

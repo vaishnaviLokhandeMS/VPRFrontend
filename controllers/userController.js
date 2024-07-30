@@ -1,9 +1,10 @@
 const bcrypt = require('bcrypt');
-const db = require('../config/db');
+const { createConnection } = require('../config/db');
 const generateUniqueUserID = require('../utils/generateUniqueUserID');
 
 // Function to create a new user
 const createUser = async (req, res) => {
+  const db = createConnection(); // Always use default database 'mvpr'
   const {
     username,
     password,
@@ -25,6 +26,7 @@ const createUser = async (req, res) => {
 
   // Check if passwords match
   if (password !== confirmPassword) {
+    db.end();
     return res.status(400).json({ message: 'Passwords do not match. Please verify your password.' });
   }
 
@@ -32,9 +34,11 @@ const createUser = async (req, res) => {
   const checkUserQuery = 'SELECT * FROM users WHERE username = ? OR email = ?';
   db.query(checkUserQuery, [username, email], async (err, results) => {
     if (err) {
+      db.end();
       return res.status(500).json({ message: err.message });
     }
     if (results.length > 0) {
+      db.end();
       return res.status(400).json({ message: 'Username or email already exists. Please use a different one.' });
     }
 
@@ -71,6 +75,7 @@ const createUser = async (req, res) => {
           access_level,
         ],
         (err, result) => {
+          db.end();
           if (err) {
             return res.status(500).json({ message: err.message });
           }
@@ -78,6 +83,7 @@ const createUser = async (req, res) => {
         }
       );
     } catch (error) {
+      db.end();
       return res.status(500).json({ message: error.message });
     }
   });

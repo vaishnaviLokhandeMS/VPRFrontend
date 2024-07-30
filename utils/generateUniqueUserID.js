@@ -1,8 +1,9 @@
-const db = require('../config/db');
+const { createConnection } = require('../config/db');
 const moment = require('moment');
 
 const generateUniqueUserID = async () => {
   return new Promise((resolve, reject) => {
+    const db = createConnection(); // Always use default database 'mvpr'
     const currentDate = moment();
     const year = currentDate.year();
     const week = currentDate.isoWeek();
@@ -15,6 +16,7 @@ const generateUniqueUserID = async () => {
     const checkCounterQuery = 'SELECT * FROM user_counter WHERE date = ?';
     db.query(checkCounterQuery, [dateString], (err, results) => {
       if (err) {
+        db.end();
         return reject(err);
       }
 
@@ -26,6 +28,7 @@ const generateUniqueUserID = async () => {
         const updateCounterQuery = 'UPDATE user_counter SET counter = ? WHERE date = ?';
         db.query(updateCounterQuery, [counter, dateString], (updateErr) => {
           if (updateErr) {
+            db.end();
             return reject(updateErr);
           }
         });
@@ -34,12 +37,14 @@ const generateUniqueUserID = async () => {
         const insertCounterQuery = 'INSERT INTO user_counter (date, counter) VALUES (?, ?)';
         db.query(insertCounterQuery, [dateString, counter], (insertErr) => {
           if (insertErr) {
+            db.end();
             return reject(insertErr);
           }
         });
       }
 
       const userID = `U${year}${dayShortForm}${week.toString().padStart(2, '0')}${counter.toString().padStart(3, '0')}`;
+      db.end();
       resolve(userID);
     });
   });

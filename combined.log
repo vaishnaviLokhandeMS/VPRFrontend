@@ -1,0 +1,292 @@
+2024-07-30T07:53:15.080Z [info]: Creating connection to database: mvpr
+2024-07-30T07:53:15.241Z [info]: Connected to database: mvpr
+2024-07-30T07:53:15.260Z [info]: Creating connection to database: mvpr
+2024-07-30T07:53:15.277Z [info]: Connected to database: mvpr
+2024-07-30T07:53:15.289Z [info]: Creating connection to database: mvpr
+2024-07-30T07:53:15.299Z [info]: Creating connection to database: mvpr
+2024-07-30T07:53:15.309Z [info]: Connected to database: mvpr
+2024-07-30T07:53:15.314Z [info]: Connected to database: mvpr
+2024-07-30T07:53:15.325Z [info]: Creating connection to database: mvpr
+2024-07-30T07:53:15.331Z [info]: Creating connection to database: mvpr
+2024-07-30T07:53:15.341Z [info]: Connected to database: mvpr
+2024-07-30T07:53:15.346Z [info]: Connected to database: mvpr
+2024-07-30T07:53:40.341Z [info]: Creating connection to database: mvpr
+2024-07-30T07:53:40.348Z [info]: Connected to database: mvpr
+2024-07-30T08:18:58.192Z [info]: Creating connection to database: mvpr
+2024-07-30T08:18:58.204Z [info]: Creating connection to database: mvpr
+2024-07-30T08:18:58.214Z [info]: Creating connection to database: mvpr
+2024-07-30T08:18:58.219Z [info]: Connected to database: mvpr
+2024-07-30T08:18:58.229Z [info]: Creating connection to database: mvpr
+2024-07-30T08:18:58.234Z [info]: Connected to database: mvpr
+2024-07-30T08:18:58.246Z [info]: Connected to database: mvpr
+2024-07-30T08:18:58.248Z [info]: Connected to database: mvpr
+2024-07-30T08:19:00.045Z [info]: Creating connection to database: mvpr
+2024-07-30T08:19:00.053Z [info]: Connected to database: mvpr
+2024-07-30T08:19:00.261Z [info]: Creating connection to database: mvpr
+2024-07-30T08:19:00.272Z [info]: Connected to database: mvpr
+2024-07-30T08:19:00.279Z [info]: Creating connection to database: mvpr
+2024-07-30T08:19:00.297Z [info]: Connected to database: mvpr
+2024-07-30T08:19:03.538Z [info]: Creating connection to database: mvpr
+2024-07-30T08:19:03.546Z [info]: Connected to database: mvpr
+2024-07-30T08:19:46.374Z [info]: Creating connection to database: mvpr
+2024-07-30T08:19:46.378Z [info]: Connected to database: mvpr
+2024-07-30T08:19:46.381Z [info]: Creating connection to database: mvpr
+2024-07-30T08:19:46.389Z [info]: Connected to database: mvpr
+2024-07-30T08:20:00.994Z [info]: Creating connection to database: mvpr
+2024-07-30T08:20:00.998Z [info]: Connected to database: mvpr
+2024-07-30T08:20:29.282Z [info]: Creating connection to database: mvpr
+2024-07-30T08:20:29.285Z [info]: Connected to database: mvpr
+2024-07-30T08:24:03.870Z [info]: Creating connection to database: mvpr
+2024-07-30T08:24:03.955Z [info]: Connected to database: mvpr
+2024-07-30T08:24:04.040Z [info]: Creating connection to database: mvpr
+2024-07-30T08:24:04.046Z [info]: Connected to database: mvpr
+2024-07-30T08:24:06.162Z [info]: Creating connection to database: mvpr
+2024-07-30T08:24:06.182Z [info]: Connected to database: mvpr
+2024-07-30T08:24:06.194Z [info]: Creating connection to database: mvpr
+2024-07-30T08:24:06.211Z [info]: Connected to database: mvpr
+2024-07-30T08:25:42.225Z [info]: Creating connection to database: mvpr
+2024-07-30T08:25:42.229Z [info]: Connected to database: mvpr
+2024-07-30T08:39:15.966Z [info]: Creating connection to database: mvpr
+2024-07-30T08:39:16.088Z [info]: Connected to database: mvpr
+2024-07-30T08:39:16.312Z [info]: Creating connection to database: mvpr
+2024-07-30T08:39:16.342Z [info]: Connected to database: mvpr
+2024-07-30T08:39:16.363Z [info]: Creating connection to database: mvpr
+2024-07-30T08:39:16.383Z [info]: Connected to database: mvpr
+2024-07-30T08:39:35.895Z [info]: Creating connection to database: mvpr
+2024-07-30T08:39:35.901Z [info]: Connected to database: mvpr
+2024-07-30T08:39:35.989Z [info]: Creating connection to database: mvpr
+2024-07-30T08:39:35.997Z [info]: Connected to database: mvpr
+2024-07-30T08:39:36.008Z [info]: Creating connection to database: [object Object]
+2024-07-30T08:39:36.016Z [error]: Error connecting to database [object Object]: ER_BAD_DB_ERROR: Unknown database '[object object]'
+2024-07-30T08:43:43.897Z [info]: Creating connection to database: mvpr
+2024-07-30T08:43:43.957Z [info]: Connected to database: mvpr
+2024-07-30T08:43:44.030Z [info]: Creating connection to database: mvpr
+2024-07-30T08:43:44.036Z [info]: Connected to database: mvpr
+2024-07-30T08:43:44.047Z [info]: Creating connection to database: S2024TUE31019
+2024-07-30T08:43:44.052Z [info]: Connected to database: S2024TUE31019
+2024-07-30T08:43:46.402Z [info]: Creating connection to database: mvpr
+2024-07-30T08:43:46.417Z [info]: Connected to database: mvpr
+2024-07-30T08:43:46.427Z [info]: Creating connection to database: mvpr
+2024-07-30T08:43:46.437Z [info]: Connected to database: mvpr
+2024-07-30T09:34:09.000Z [info]: Creating connection to database: mvpr
+2024-07-30T09:34:09.190Z [info]: Connected to database: mvpr
+2024-07-30T09:34:09.212Z [info]: Creating connection to database: mvpr
+2024-07-30T09:34:09.230Z [info]: Connected to database: mvpr
+2024-07-30T09:34:09.242Z [info]: Creating connection to database: mvpr
+2024-07-30T09:34:09.261Z [info]: Connected to database: mvpr
+2024-07-30T09:34:09.271Z [info]: Creating connection to database: mvpr
+2024-07-30T09:34:09.291Z [info]: Connected to database: mvpr
+2024-07-30T09:34:11.857Z [info]: Creating connection to database: mvpr
+2024-07-30T09:34:11.865Z [info]: Connected to database: mvpr
+2024-07-30T09:34:13.379Z [info]: Creating connection to database: mvpr
+2024-07-30T09:34:13.387Z [info]: Connected to database: mvpr
+2024-07-30T09:35:26.225Z [info]: Creating connection to database: mvpr
+2024-07-30T09:35:26.230Z [info]: Connected to database: mvpr
+2024-07-30T09:35:26.233Z [info]: Creating connection to database: mvpr
+2024-07-30T09:35:26.243Z [info]: Connected to database: mvpr
+2024-07-30T09:35:34.562Z [info]: Creating connection to database: mvpr
+2024-07-30T09:35:34.568Z [info]: Connected to database: mvpr
+2024-07-30T09:35:58.284Z [info]: Creating connection to database: mvpr
+2024-07-30T09:35:58.289Z [info]: Connected to database: mvpr
+2024-07-30T09:35:58.351Z [info]: Creating connection to database: mvpr
+2024-07-30T09:35:58.356Z [info]: Connected to database: mvpr
+2024-07-30T09:35:58.364Z [info]: Creating connection to database: S2024TUE31021
+2024-07-30T09:35:58.368Z [info]: Connected to database: S2024TUE31021
+2024-07-30T09:36:00.544Z [info]: Creating connection to database: mvpr
+2024-07-30T09:36:00.556Z [info]: Connected to database: mvpr
+2024-07-30T09:36:00.565Z [info]: Creating connection to database: mvpr
+2024-07-30T09:36:00.576Z [info]: Connected to database: mvpr
+2024-07-30T09:38:45.302Z [info]: Creating connection to database: mvpr
+2024-07-30T09:38:45.370Z [info]: Connected to database: mvpr
+2024-07-30T09:38:45.428Z [info]: Creating connection to database: mvpr
+2024-07-30T09:38:45.433Z [info]: Connected to database: mvpr
+2024-07-30T09:38:45.443Z [info]: Creating connection to database: S2024TUE31022
+2024-07-30T09:38:45.447Z [info]: Connected to database: S2024TUE31022
+2024-07-30T09:38:47.629Z [info]: Creating connection to database: mvpr
+2024-07-30T09:38:47.649Z [info]: Connected to database: mvpr
+2024-07-30T09:38:47.660Z [info]: Creating connection to database: mvpr
+2024-07-30T09:38:47.671Z [info]: Connected to database: mvpr
+2024-07-30T10:49:06.457Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:06.548Z [info]: Connected to database: mvpr
+2024-07-30T10:49:08.404Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:08.411Z [info]: Connected to database: mvpr
+2024-07-30T10:49:10.041Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:10.047Z [info]: Connected to database: mvpr
+2024-07-30T10:49:22.550Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:22.563Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:22.575Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:22.579Z [info]: Connected to database: mvpr
+2024-07-30T10:49:22.585Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:22.590Z [info]: Connected to database: mvpr
+2024-07-30T10:49:22.601Z [info]: Connected to database: mvpr
+2024-07-30T10:49:22.602Z [info]: Connected to database: mvpr
+2024-07-30T10:49:24.723Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:24.729Z [info]: Connected to database: mvpr
+2024-07-30T10:49:24.916Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:24.936Z [info]: Connected to database: mvpr
+2024-07-30T10:49:24.948Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:24.964Z [info]: Connected to database: mvpr
+2024-07-30T10:49:26.017Z [info]: Creating connection to database: mvpr
+2024-07-30T10:49:26.024Z [info]: Connected to database: mvpr
+2024-07-30T11:39:13.381Z [info]: Creating connection to database: mvpr
+2024-07-30T11:39:13.399Z [info]: Connected to database: mvpr
+2024-07-30T11:39:13.405Z [info]: Creating connection to database: mvpr
+2024-07-30T11:39:13.414Z [info]: Connected to database: mvpr
+2024-07-30T11:39:13.422Z [info]: Creating connection to database: mvpr
+2024-07-30T11:39:13.430Z [info]: Connected to database: mvpr
+2024-07-30T11:39:13.436Z [info]: Creating connection to database: mvpr
+2024-07-30T11:39:13.444Z [info]: Connected to database: mvpr
+2024-07-30T11:44:03.171Z [info]: Creating connection to database: mvpr
+2024-07-30T11:44:03.182Z [info]: Connected to database: mvpr
+2024-07-30T11:44:03.188Z [info]: Creating connection to database: mvpr
+2024-07-30T11:44:03.198Z [info]: Connected to database: mvpr
+2024-07-30T11:44:03.203Z [info]: Creating connection to database: mvpr
+2024-07-30T11:44:03.212Z [info]: Connected to database: mvpr
+2024-07-30T11:44:03.219Z [info]: Creating connection to database: mvpr
+2024-07-30T11:44:03.228Z [info]: Connected to database: mvpr
+2024-07-30T11:44:42.796Z [info]: Creating connection to database: mvpr
+2024-07-30T11:44:42.810Z [info]: Connected to database: mvpr
+2024-07-30T11:44:42.826Z [info]: Creating connection to database: mvpr
+2024-07-30T11:44:42.930Z [info]: Connected to database: mvpr
+2024-07-30T11:44:42.937Z [info]: Creating connection to database: mvpr
+2024-07-30T11:44:42.966Z [info]: Connected to database: mvpr
+2024-07-30T11:44:42.990Z [info]: Creating connection to database: mvpr
+2024-07-30T11:44:43.006Z [info]: Connected to database: mvpr
+2024-07-30T12:28:47.789Z [info]: Creating connection to database: mvpr
+2024-07-30T12:28:47.808Z [info]: Connected to database: mvpr
+2024-07-30T12:28:47.953Z [info]: Creating connection to database: mvpr
+2024-07-30T12:28:47.966Z [info]: Connected to database: mvpr
+2024-07-30T12:28:47.976Z [info]: Creating connection to database: mvpr
+2024-07-30T12:28:47.986Z [info]: Connected to database: mvpr
+2024-07-30T12:28:53.310Z [info]: Creating connection to database: mvpr
+2024-07-30T12:28:53.315Z [info]: Connected to database: mvpr
+2024-07-30T13:54:03.574Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:03.590Z [info]: Connected to database: mvpr
+2024-07-30T13:54:03.731Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:03.744Z [info]: Connected to database: mvpr
+2024-07-30T13:54:03.754Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:03.764Z [info]: Connected to database: mvpr
+2024-07-30T13:54:17.784Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:17.793Z [info]: Connected to database: mvpr
+2024-07-30T13:54:17.797Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:17.806Z [info]: Connected to database: mvpr
+2024-07-30T13:54:17.810Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:17.822Z [info]: Connected to database: mvpr
+2024-07-30T13:54:17.826Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:17.838Z [info]: Connected to database: mvpr
+2024-07-30T13:54:30.032Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:30.044Z [info]: Connected to database: mvpr
+2024-07-30T13:54:30.058Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:30.070Z [info]: Connected to database: mvpr
+2024-07-30T13:54:30.075Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:30.088Z [info]: Connected to database: mvpr
+2024-07-30T13:54:30.093Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:30.107Z [info]: Connected to database: mvpr
+2024-07-30T13:54:30.150Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:30.164Z [info]: Connected to database: mvpr
+2024-07-30T13:54:30.173Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:30.185Z [info]: Connected to database: mvpr
+2024-07-30T13:54:44.482Z [info]: Creating connection to database: mvpr
+2024-07-30T13:54:44.488Z [info]: Connected to database: mvpr
+2024-07-30T13:56:11.180Z [info]: Creating connection to database: mvpr
+2024-07-30T13:56:11.189Z [info]: Connected to database: mvpr
+2024-07-30T13:56:11.194Z [info]: Creating connection to database: mvpr
+2024-07-30T13:56:11.204Z [info]: Connected to database: mvpr
+2024-07-30T13:56:11.211Z [info]: Creating connection to database: mvpr
+2024-07-30T13:56:11.222Z [info]: Connected to database: mvpr
+2024-07-30T13:56:11.226Z [info]: Creating connection to database: mvpr
+2024-07-30T13:56:11.237Z [info]: Connected to database: mvpr
+2024-07-30T19:33:57.837Z [info]: Creating connection to database: mvpr
+2024-07-30T19:33:57.955Z [info]: Creating connection to database: mvpr
+2024-07-30T19:33:57.967Z [info]: Creating connection to database: mvpr
+2024-07-30T19:33:57.971Z [info]: Connected to database: mvpr
+2024-07-30T19:33:57.977Z [info]: Creating connection to database: mvpr
+2024-07-30T19:33:57.979Z [info]: Connected to database: mvpr
+2024-07-30T19:33:57.988Z [info]: Connected to database: mvpr
+2024-07-30T19:33:57.992Z [info]: Connected to database: mvpr
+2024-07-30T19:34:51.941Z [info]: Creating connection to database: mvpr
+2024-07-30T19:34:51.946Z [info]: Connected to database: mvpr
+2024-07-30T19:34:51.950Z [info]: Creating connection to database: mvpr
+2024-07-30T19:34:51.958Z [info]: Connected to database: mvpr
+2024-07-30T19:35:07.605Z [info]: Creating connection to database: mvpr
+2024-07-30T19:35:07.610Z [info]: Connected to database: mvpr
+2024-07-30T19:35:38.629Z [info]: Creating connection to database: mvpr
+2024-07-30T19:35:38.633Z [info]: Connected to database: mvpr
+2024-07-30T19:35:38.691Z [info]: Creating connection to database: mvpr
+2024-07-30T19:35:38.696Z [info]: Connected to database: mvpr
+2024-07-30T19:35:38.707Z [info]: Creating connection to database: S2024WED31001
+2024-07-30T19:35:38.711Z [info]: Connected to database: S2024WED31001
+2024-07-30T19:39:20.364Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:20.372Z [info]: Connected to database: mvpr
+2024-07-30T19:39:20.440Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:20.445Z [info]: Connected to database: mvpr
+2024-07-30T19:39:35.370Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:35.377Z [info]: Connected to database: mvpr
+2024-07-30T19:39:35.434Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:35.437Z [info]: Connected to database: mvpr
+2024-07-30T19:39:44.084Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:44.089Z [info]: Connected to database: mvpr
+2024-07-30T19:39:44.151Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:44.155Z [info]: Connected to database: mvpr
+2024-07-30T19:39:48.340Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:48.349Z [info]: Connected to database: mvpr
+2024-07-30T19:39:48.355Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:48.365Z [info]: Connected to database: mvpr
+2024-07-30T19:39:48.370Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:48.380Z [info]: Connected to database: mvpr
+2024-07-30T19:39:48.388Z [info]: Creating connection to database: mvpr
+2024-07-30T19:39:48.397Z [info]: Connected to database: mvpr
+2024-07-30T19:41:48.044Z [info]: Creating connection to database: mvpr
+2024-07-30T19:41:48.132Z [info]: Connected to database: mvpr
+2024-07-30T19:42:09.924Z [info]: Creating connection to database: mvpr
+2024-07-30T19:42:09.931Z [info]: Connected to database: mvpr
+2024-07-30T19:42:09.997Z [info]: Creating connection to database: mvpr
+2024-07-30T19:42:10.002Z [info]: Connected to database: mvpr
+2024-07-30T19:43:44.881Z [info]: Creating connection to database: mvpr
+2024-07-30T19:43:44.890Z [info]: Connected to database: mvpr
+2024-07-30T19:43:44.949Z [info]: Creating connection to database: mvpr
+2024-07-30T19:43:44.953Z [info]: Connected to database: mvpr
+2024-07-30T19:47:38.760Z [info]: Creating connection to database: mvpr
+2024-07-30T19:47:38.827Z [info]: Connected to database: mvpr
+2024-07-30T19:47:38.887Z [info]: Creating connection to database: mvpr
+2024-07-30T19:47:38.894Z [info]: Connected to database: mvpr
+2024-07-30T19:49:00.232Z [info]: Creating connection to database: mvpr
+2024-07-30T19:49:00.322Z [info]: Connected to database: mvpr
+2024-07-30T19:49:00.394Z [info]: Creating connection to database: mvpr
+2024-07-30T19:49:00.400Z [info]: Connected to database: mvpr
+2024-07-30T19:49:00.412Z [info]: Creating connection to database: S2024WED31002
+2024-07-30T19:49:00.416Z [info]: Connected to database: S2024WED31002
+2024-07-30T19:49:02.627Z [info]: Creating connection to database: mvpr
+2024-07-30T19:49:02.639Z [info]: Connected to database: mvpr
+2024-07-30T19:49:02.644Z [info]: Creating connection to database: mvpr
+2024-07-30T19:49:02.651Z [info]: Connected to database: mvpr
+2024-07-30T19:49:11.467Z [info]: Creating connection to database: mvpr
+2024-07-30T19:49:11.472Z [info]: Connected to database: mvpr
+2024-07-30T19:54:10.537Z [info]: Creating connection to database: mvpr
+2024-07-30T19:54:10.571Z [info]: Connected to database: mvpr
+2024-07-30T19:54:10.582Z [info]: Creating connection to database: mvpr
+2024-07-30T19:54:10.597Z [info]: Connected to database: mvpr
+2024-07-30T19:54:10.603Z [info]: Creating connection to database: mvpr
+2024-07-30T19:54:10.624Z [info]: Connected to database: mvpr
+2024-07-30T19:54:10.633Z [info]: Creating connection to database: mvpr
+2024-07-30T19:54:10.650Z [info]: Connected to database: mvpr
+2024-07-30T19:58:13.239Z [info]: Creating connection to database: mvpr
+2024-07-30T19:58:13.260Z [info]: Connected to database: mvpr
+2024-07-30T19:58:13.281Z [info]: Creating connection to database: mvpr
+2024-07-30T19:58:13.305Z [info]: Connected to database: mvpr
+2024-07-30T19:58:13.312Z [info]: Creating connection to database: mvpr
+2024-07-30T19:58:13.412Z [info]: Connected to database: mvpr
+2024-07-30T19:58:13.432Z [info]: Creating connection to database: mvpr
+2024-07-30T19:58:13.453Z [info]: Connected to database: mvpr
+2024-07-30T20:27:29.102Z [info]: Creating connection to database: S2024WED31002
+2024-07-30T20:27:29.165Z [info]: Creating connection to database: mvpr
+2024-07-30T20:27:29.182Z [info]: Connected to database: S2024WED31002
+2024-07-30T20:27:29.183Z [info]: Connected to database: mvpr
+2024-07-30T20:28:05.264Z [info]: Creating connection to database: S2024WED31002
+2024-07-30T20:28:05.266Z [info]: Creating connection to database: mvpr
+2024-07-30T20:28:05.274Z [info]: Connected to database: S2024WED31002
+2024-07-30T20:28:05.276Z [info]: Connected to database: mvpr
+2024-07-30T20:29:14.268Z [info]: Creating connection to database: S2024WED31002
+2024-07-30T20:29:14.269Z [info]: Creating connection to database: mvpr
+2024-07-30T20:29:14.278Z [info]: Connected to database: S2024WED31002
+2024-07-30T20:29:14.280Z [info]: Connected to database: mvpr
