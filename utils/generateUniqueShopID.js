@@ -13,7 +13,7 @@ const generateUniqueShopID = async () => {
     const dateString = currentDate.format('YYYY-MM-DD');
 
     // Check if there's a counter for today
-    const checkCounterQuery = 'SELECT * FROM user_counter WHERE date = ?';
+    const checkCounterQuery = 'SELECT * FROM shop_counter WHERE date = ?';
     db.query(checkCounterQuery, [dateString], (err, results) => {
       if (err) {
         db.end();
@@ -24,7 +24,7 @@ const generateUniqueShopID = async () => {
 
       if (results.length > 0) {
         // If there's an existing counter for today, increment it
-        counter = results[0].counter + 1;
+        counter = results[0].counter +1;
         const updateCounterQuery = 'UPDATE shop_counter SET counter = ? WHERE date = ?';
         db.query(updateCounterQuery, [counter, dateString], (updateErr) => {
           if (updateErr) {

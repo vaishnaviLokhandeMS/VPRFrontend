@@ -105,7 +105,7 @@ const createShop = async (req, res) => {
             console.log(`MongoDB database ${shopID} created successfully`);
             // Perform an initial write to ensure the database is created
             const initialCollection = shopMongoConnection.collection('initialCollection');
-            await initialCollection.insertOne({ init: true });
+            await initialCollection.insertOne({ init: false });
             console.log(`Initial document written to MongoDB database ${shopID}`);
           });
 
