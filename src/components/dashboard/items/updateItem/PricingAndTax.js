@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PricingAndTax.css';
 
-const PricingAndTax = ({ formData, onChange }) => {
+const PricingAndTax = () => {
+  const [formData, setFormData] = useState({
+    sgst: '',
+    cgst: '',
+    salePriceWithTax: '',
+    salePriceWithoutTax: '',
+    wholesalePriceWithTax: '',
+    wholesalePriceWithoutTax: '',
+    discountedPriceWithTax: '',
+    discountedPriceWithoutTax: '',
+    costPriceWithTax: '',
+    costPriceWithoutTax: '',
+    wholesaleQuantity: '',
+  });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -43,7 +56,12 @@ const PricingAndTax = ({ formData, onChange }) => {
         break;
     }
 
-    onChange({ target: { name, value: updatedFormData[name] } });
+    setFormData(updatedFormData);
+  };
+
+  const handleWholesaleQuantityChange = (event) => {
+    const { value } = event.target;
+    setFormData({ ...formData, wholesaleQuantity: value });
   };
 
   return (
@@ -137,7 +155,7 @@ const PricingAndTax = ({ formData, onChange }) => {
             name="wholesaleQuantity"
             placeholder="Enter quantity"
             value={formData.wholesaleQuantity}
-            onChange={handleInputChange}
+            onChange={handleWholesaleQuantityChange}
             className="animated-input"
           />
         </div>
@@ -148,7 +166,6 @@ const PricingAndTax = ({ formData, onChange }) => {
             name="wholesaleUnit"
             disabled={!formData.wholesaleQuantity}
             className={`animated-input ${!formData.wholesaleQuantity ? 'disabled-select' : ''}`}
-            onChange={handleInputChange}
           >
             <option value="">Select Unit</option>
             <option value="pcs">Pieces (pcs)</option>

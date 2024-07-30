@@ -4,11 +4,6 @@
     background-color: #2e2e2e;
     border-radius: 8px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .box:hover {
-    transform: scale(1.01);
   }
   
   .box h2 {
@@ -49,29 +44,16 @@
     background-color: #444444;
     color: #ffffff;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
   }
   
   .form-group input:focus,
   .form-group select:focus {
     border-color: #ffcc00;
+    background-color: #555555;
   }
   
-  .animated-input {
-    transition: background-color 0.3s ease;
-  }
-  
-  .animated-input:focus {
-    background-color: #1a4769;
-  }
-  
-  .disabled-select {
-    background-color: #666666;
-    cursor: not-allowed;
-  }
-  
-  .form-group input:disabled,
-  .form-group select:disabled {
-    opacity: 0.6;
+  .animated-input:hover {
+    background-color: #555555;
   }
   

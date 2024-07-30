@@ -14,6 +14,7 @@ import NoShop from './components/NoShop/NoShop';
 import CreateShop from './components/shop/create/CreateShop';
 import ProvideShopID from './components/NoShop/ProvideShopID/ProvideShopID';
 import AddItem from './components/dashboard/items/addItem/AddItem'; // Import the Add Item component
+import UpdateItem from './components/dashboard/items/updateItem/UpdateItem'
 import { AuthContext, AuthProvider } from './context/AuthContext';
 import './App.css';
 import './animations.css';
@@ -60,6 +61,7 @@ const AppRoutes = () => {
               <Route path="/create-shop" element={isAuthenticated ? <CreateShop /> : <Navigate to="/login" />} />
               <Route path="/provide-shop-id" element={isAuthenticated ? <ProvideShopID /> : <Navigate to="/login" />} />
               <Route path="/items/add" element={isAuthenticated ? <AddItem /> : <Navigate to="/login" />} /> {/* Add the route for Add Item */}
+              <Route path="/items/update" element={isAuthenticated ? <UpdateItem/> : <Navigate to="/login" />} /> {/* Add the route for Update Item */}
               <Route path="*" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />} />
             </Routes>
           </CSSTransition>
