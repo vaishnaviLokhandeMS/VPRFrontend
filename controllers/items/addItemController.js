@@ -10,7 +10,7 @@ const connectMongoDB = require('../../config/mongo');
 
 const addItem = async (req, res) => {
   const {
-    itemName,
+    itemName, // Added itemName to the destructured object
     itemHSN,
     itemCode,
     shortDescription,
@@ -116,12 +116,12 @@ const addItem = async (req, res) => {
     const currentDate = moment().format('YYYY-MM-DD');
     const currentTime = moment().format('HH:mm:ss');
 
-    // Insert item into MySQL
+    // Insert item into MySQL including itemName
     const insertItemQuery = `
-      INSERT INTO items (itemID, createdBy, createdOnDate, createdOnTime, modifiedBy, modifiedOnDate, modifiedOnTime)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO items (itemID, itemname, createdBy, createdOnDate, createdOnTime, modifiedBy, modifiedOnDate, modifiedOnTime)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `;
-    const itemData = [itemID, userID, currentDate, currentTime, userID, currentDate, currentTime];
+    const itemData = [itemID, itemName, userID, currentDate, currentTime, userID, currentDate, currentTime];
 
     db.query(insertItemQuery, itemData, (insertItemErr, result) => {
       if (insertItemErr) {

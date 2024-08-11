@@ -5,14 +5,16 @@ const initializeShopDatabase = async (shopID) => {
   
   const createTablesQueries = [
     `CREATE TABLE items (
-      itemID VARCHAR(255) PRIMARY KEY,
-      createdBy VARCHAR(255) NOT NULL,
-      createdOnDate DATE NOT NULL,
-      createdOnTime TIME NOT NULL,
-      modifiedBy VARCHAR(255),
-      modifiedOnDate DATE,
-      modifiedOnTime TIME
-    );`,
+    itemID VARCHAR(255) PRIMARY KEY,
+    itemname VARCHAR(255),
+    createdBy VARCHAR(255) NOT NULL,
+    createdOnDate DATE NOT NULL,
+    createdOnTime TIME NOT NULL,
+    modifiedBy VARCHAR(255),
+    modifiedOnDate DATE,
+    modifiedOnTime TIME
+);
+`,
     `CREATE TABLE customer (
       customerID VARCHAR(255) PRIMARY KEY,
       firstName VARCHAR(255) NOT NULL,
