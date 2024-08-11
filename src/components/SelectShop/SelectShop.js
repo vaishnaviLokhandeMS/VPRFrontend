@@ -15,7 +15,7 @@ const SelectShop = () => {
     const fetchShops = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/shops/user-shops', {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/shops/user-shops`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setShops(response.data.shops);
@@ -38,7 +38,7 @@ const SelectShop = () => {
   const handleSelectShop = async (shopId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5000/api/shops/select-shop', { shopId }, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/shops/select-shop`, { shopId }, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

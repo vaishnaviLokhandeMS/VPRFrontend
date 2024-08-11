@@ -1,0 +1,69 @@
+.box {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  .info-text {
+    margin-bottom: 20px;
+    color: #cccccc;
+  }
+  
+  .form-group-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    flex: 1 1 45%;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    background-color: #444444;
+    color: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #ffcc00;
+    background-color: #555555;
+  }
+  
+  .animated-input:hover {
+    background-color: #555555;
+  }
+  
+  .disabled-select {
+    background-color: #666666;
+    cursor: not-allowed;
+  }
+  
+  .form-group input:disabled,
+  .form-group select:disabled {
+    opacity: 0.6;
+  }
+  

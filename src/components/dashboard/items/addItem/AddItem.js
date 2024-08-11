@@ -137,7 +137,7 @@ const AddItem = () => {
     const shopToken = localStorage.getItem('shopToken');
 
     // Submit form data to backend API
-    fetch('http://localhost:5000/api/items/addItem', {
+    fetch(`${process.env.REACT_APP_API_URL}/api/items/addItem`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

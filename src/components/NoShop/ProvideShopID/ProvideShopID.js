@@ -16,7 +16,7 @@ const ProvideShopID = () => {
     try {
       const token = localStorage.getItem('token'); // Get the token from localStorage
       const response = await axios.post(
-        'http://localhost:5000/api/shops/validate',
+        `${process.env.REACT_APP_API_URL}/api/shops/validate`,
         { shopID, password },
         { headers: { Authorization: `Bearer ${token}` } } // Pass the token in headers
       );

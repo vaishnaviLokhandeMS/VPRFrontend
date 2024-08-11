@@ -53,7 +53,7 @@ const CreateShop = () => {
     try {
       const token = localStorage.getItem('token');
       console.log('Token:', token); // Debugging log
-      const response = await axios.post('http://localhost:5000/api/shops/create', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/shops/create`, {
         ...shopDetails,
         user_id: userId, // Add the logged-in user UUID from the decoded token
       }, {

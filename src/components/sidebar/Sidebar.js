@@ -50,6 +50,11 @@ const Sidebar = ({ onLogout }) => {
                 </NavLink>
               </li>
               <li>
+                <NavLink to="/items/delete" activeClassName="active-link">
+                  Delete Item
+                </NavLink>
+              </li>
+              <li>
                 <NavLink to="/items/inventory" activeClassName="active-link">
                   Inventory
                 </NavLink>

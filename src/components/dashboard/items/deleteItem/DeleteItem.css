@@ -1,0 +1,115 @@
+.delete-item-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 220px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+    color: #b0b0b0;
+    min-height: 100vh;
+  }
+  
+  .delete-item {
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .delete-item h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .info-text {
+    margin-bottom: 20px;
+    color: #ffcc00; /* Optional: Highlight the information text */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #ffffff;
+    box-sizing: border-box;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .delete-button {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #c9302c;
+  }
+  
+  .confirmation-dialog {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  .confirmation-dialog p {
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-dialog button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .confirmation-dialog button:first-child {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .confirmation-dialog button:last-child {
+    background-color: #f0f0f0;
+  }
+
+  .get-data-button {
+    margin-top: 24px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .get-data-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
